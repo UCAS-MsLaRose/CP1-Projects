@@ -1,7 +1,12 @@
-def fibothing(n):
-    a, b = 0, 1
-    for _ in range(n):
-        print(a, end=' ')
-        a, b = b, a + b
-n = 11  
-fibothing(n)
+# Connor Pavicic, Fibonacci
+import time
+
+x = 1
+y = 0
+
+while True:
+    final_num = x+y
+    print(final_num)
+    y = x
+    x = final_num
+    time.sleep(0.5)

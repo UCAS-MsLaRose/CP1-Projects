@@ -1,14 +1,19 @@
-#Pedro Souza, Average grade
-grade = 0
-allGrades = 0
-avgGrade = 0
+#Alec George Skill Practice: Average Grade
 
-classes = int(input("Amount of classes: "))
+#variables
+total_points = 0
+grades = 0
 
-for amount in range(classes):
-    print("Grade #", amount + 1, ":", sep = "", end = "")
-    grade = int(input(""))
-    allGrades += grade
-    avgGrade = allGrades / (amount + 1)
-
-print("Your average grade is ", avgGrade, "%", sep = "")
+#first grade
+total_points = int(input("type the grade of a class (number, usually from 1 to 100): "))
+grades += 1
+#other grades are optional
+while True:
+    next_grade = input("\nIf you want to add another grade, type the number.\nIf that is all the grades, type finished\ntype your answer here: ")
+    if next_grade == "finished":
+        break
+    else:
+        total_points += int(next_grade)
+        grades += 1
+average_grade = total_points / grades
+print("Your average grade is " + str(round(average_grade, 1)))
